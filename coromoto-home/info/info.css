@@ -1,0 +1,327 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    background: white;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+  }
+  
+  body.dark {
+    background: black;
+  }
+  
+  body.dark header {
+    color: white;
+  }
+  
+  body.dark .parrafo {
+    color: white;
+  }
+  
+  .grid {
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    gap: 10px;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  header {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    text-align: center;
+    margin-top: 70px;
+    
+  }
+  
+  .sobre-nosotros {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    height: auto;
+  }
+  
+  .slogan {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .parrafo {
+    margin-bottom: 5px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: #181010;
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  
+  .contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+  }
+  
+  nav {
+    background: #FEFEFE;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  }
+  
+  body.dark nav {
+    background: gray;
+    -webkit-box-shadow: white;
+            box-shadow: white;
+  }
+  
+  body.dark nav a {
+    color: white;
+  }
+  
+  body.dark nav a:hover {
+    color: white;
+  }
+  
+  nav .logotipo {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav .enlaces {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  nav .enlaces a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav .enlaces a:hover {
+    color: #707070;
+  }
+  
+  .switch {
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+  }
+  
+  .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .switch.active {
+    background: orange;
+    color: black;
+  }
+  
+  .switch.active::after {
+    right: 0;
+    left: unset;
+  }
+  
+  .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+  }
+
+  
+
+  .contact-info{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+  
+  
+  .card{
+    background: white;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    cursor: pointer;
+  }
+  
+  .card-icon{
+    font-size: 28px;
+    background: rgba(24,16,16,.7);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+  
+  .card:hover .card-icon{
+    background: none;
+    color: rgba(24,16,16,.7);
+    transform: scale(1.6);
+  }
+  
+  .card p{
+    margin-top: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+    color: black;
+  }
+  
+  .card:hover p{
+    max-height: 40px;
+    opacity: 1;
+  }
+
+  footer{
+    background: white;
+    color: rgb(27, 16, 16);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 100px;
+}
+
+body.dark footer{
+  color: white;
+  background: black;
+}
+
+body.dark a{
+  color: white;
+}
+
+.textos-footer{
+    grid-column: 1/-1;
+    margin-bottom: 20px;
+}
+
+[class^="footer-item"] a{
+    color: rgb(27, 16, 16);
+    font-size: 30px;
+}
+
+[class^="footer-item"] {
+    grid-column: span 3;
+}
+
+  body.dark .card{
+    background: black;
+    color: white;
+  }
+  body.dark .sobre-texto{
+    color: white;
+  }
+
+  body.dark .card p{
+    color: white;
+  }
+  
+  
+  @media screen and (max-width:800px) {
+    .contact-info{
+      flex-direction: column;
+    }
+    .card{
+      width: 100%;
+      max-width: 300px;
+      margin: 10px 0;
+    }
+  }
+  
+  .mapeo{
+    grid-column: 1/7; 
+    grid-row: 1/-1;
+    width: 95%;
+  }
+
+  .mapa{
+    grid-column: 7/13;
+  }
+
+  .sobre-texto {
+    text-align: center;
+    font-size: 46px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    height: auto;
+  }
+
